@@ -1,14 +1,11 @@
 package ru.clevertec;
 
+import java.util.Arrays;
+
 public class Utils {
 
     public static boolean isAllPositiveNumber(String... str) {
-        for (String num : str) {
-            if (!StringUtils.isPositiveNumber(num)) {
-                return false;
-            }
-        }
-        return true;
+        return Arrays.stream(str).allMatch(StringUtils::isPositiveNumber);
     }
 
 }
