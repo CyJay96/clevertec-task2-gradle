@@ -19,3 +19,50 @@
 1. Make a Gradle plugin that also publish and connect to the project.
 2. As an example of plugin functionality - testing and report generation.
 3. Convert the test task to Gradle (if it used Maven or others).
+
+## **Get Started**
+
+### **1. Run gradle-plugin application**
+
+Build project:
+
+      $ ./gradlew build
+
+And publish plugin in local maven repository:
+
+      $ ./gradlew publishToMavenLocal
+
+
+### **2. Run utils application**
+
+Build project:
+
+      $ ./gradlew build
+
+And publish jar file in local maven repository:
+
+      $ ./gradlew publishUtilsPublicationToMavenLocal
+
+### **3. Run multi-project application**
+
+Build project:
+
+      $ ./gradlew build
+
+Run application with arguments:
+
+      $ ./gradlew run --args="12 79"
+
+Check plugin functionality:
+
+      $ ./gradlew clevertecTask
+
+### **Plugin functionality report**
+
+<p align="center">
+  <img width="700" src="img/report1.jpg"  alt="report1_img"/>
+</p>
+
+<p align="center">
+  <img width="700" src="img/report2.jpg"  alt="report2_img"/>
+</p>

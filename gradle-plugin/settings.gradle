@@ -7,12 +7,4 @@
  * in the user manual at https://docs.gradle.org/7.6/userguide/multi_project_builds.html
  */
 
-pluginManagement {
-    repositories {
-        mavenLocal()
-        gradlePluginPortal()
-    }
-}
-
-rootProject.name = 'multi-project'
-include('core', 'api')
+rootProject.name = 'gradle-plugin'
