@@ -1,11 +1,20 @@
 plugins {
     id 'java-gradle-plugin'
     id 'maven-publish'
+    id 'jacoco'
     id 'ru.clevertec.clevertec-plugin' version '0.0.1'
 }
 
 group = 'ru.clevertec'
 version = '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+}
 
 gradlePlugin {
     plugins {
@@ -13,5 +22,17 @@ gradlePlugin {
             id = 'ru.clevertec.clevertec-plugin'
             implementationClass = 'ru.clevertec.plugin.ClevertecPlugin'
         }
+    }
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
     }
 }
