@@ -1,5 +1,6 @@
 plugins {
     id 'multi.project.java-library-conventions'
+    id 'ru.clevertec.clevertec-plugin' version '0.0.1'
 }
 
 group = 'ru.clevertec'

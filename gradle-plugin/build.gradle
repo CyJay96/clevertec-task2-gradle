@@ -2,7 +2,6 @@ plugins {
     id 'java-gradle-plugin'
     id 'maven-publish'
     id 'jacoco'
-    id 'ru.clevertec.clevertec-plugin' version '0.0.1'
 }
 
 group = 'ru.clevertec'
